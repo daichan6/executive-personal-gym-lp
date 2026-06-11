@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* =========================================================
+   EXECUTIVE personal gym ／ パーソナルジムLP
+   トンマナ：プレミアム・余白重視・洗練（白 × 黒 × 薄い金）
+   筋トレ×ボクシング・完全マンツーマン／ターゲット30〜40代女性
+   ========================================================= */
+:root{
+  --bg:#ffffff;
+  --paper:#f7f5f1;
+  --black:#0d0d0d;
+  --black2:#161616;
+  --ink:#15140f;
+  --ink-soft:#5b5750;
+  --ink-mute:#9a948a;
+  --line:#e7e3d9;
+  --gold:#c2a878;       /* 薄い金 */
+  --gold-d:#a98c5c;
+  --gold-sb:#f3eee3;
+
+  --serif:"Cormorant Garamond","Shippori Mincho",serif;   /* 英字ディスプレイ */
+  --jp:"Shippori Mincho","Noto Serif JP",serif;            /* 和文見出し（明朝・洗練） */
+  --sans:"Noto Sans JP","Hiragino Sans",sans-serif;        /* 本文 */
+
+  --maxw:920px; --narrow:720px;
+  --pad:clamp(22px,5.5vw,40px);
+  --sec:clamp(64px,12vw,120px);   /* 余白広め */
+  --radius:4px;                    /* 直線的・洗練 */
+  --header-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:2;font-size:15px;letter-spacing:.03em;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-top:var(--header-h)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+p{margin:0 0 1.4em}
+h1,h2,h3{margin:0;font-weight:600;line-height:1.5}
+.ph{background:var(--paper);display:grid;place-items:center;color:var(--ink-mute);font-size:11px;letter-spacing:.3em}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.wrap--n{max-width:var(--narrow)}
+.section{padding-block:var(--sec)}
+.section--paper{background:var(--paper)}
+.section--black{background:var(--black);color:#fff}
+.center{text-align:center}
+.gold{color:var(--gold-d)}
+
+/* 共通見出し：英字ラベル（金・細）＋和文明朝 */
+.eyebrow{font-family:var(--serif);font-style:italic;font-size:clamp(15px,3.6vw,18px);letter-spacing:.24em;color:var(--gold-d);margin:0 0 14px}
+.section--black .eyebrow{color:var(--gold)}
+.title{font-family:var(--jp);font-weight:600;font-size:clamp(22px,5.4vw,32px);line-height:1.7;letter-spacing:.08em}
+.title .l{color:var(--gold-d)}
+.lead{color:var(--ink-soft);font-size:14.5px;margin-top:18px}
+.section--black .lead{color:rgba(255,255,255,.72)}
+.rule{width:44px;height:1px;background:var(--gold);margin:22px auto}
+
+/* ボタン */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7em;font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.12em;color:#fff;background:var(--black);border:1px solid var(--black);padding:18px 40px;border-radius:var(--radius);cursor:pointer;transition:.3s}
+.btn:hover{background:#000;transform:translateY(-2px)}
+.btn--gold{background:var(--gold);border-color:var(--gold);color:#1a1303}
+.btn--gold:hover{background:var(--gold-d);border-color:var(--gold-d)}
+.btn--outline{background:transparent;border:1px solid var(--gold);color:var(--gold-d)}
+.btn--outline:hover{background:var(--gold-sb)}
+.btn--lg{padding:20px 52px;font-size:15px}
+.btn .ar{transition:.3s}.btn:hover .ar{transform:translateX(5px)}
+.cta-note{font-size:11.5px;color:var(--ink-mute);letter-spacing:.06em;margin-top:14px}
+.section--black .cta-note{color:rgba(255,255,255,.55)}
+
+/* 固定ヘッダー */
+.site-head{position:fixed;inset:0 0 auto 0;height:var(--header-h);z-index:60;display:flex;align-items:center;background:rgba(13,13,13,.86);backdrop-filter:blur(8px);border-bottom:1px solid rgba(194,168,120,.25)}
+.site-head .wrap{max-width:1120px;display:flex;align-items:center;justify-content:space-between}
+.brand{color:#fff;font-family:var(--serif);font-size:19px;letter-spacing:.18em}
+.brand small{display:block;font-family:var(--sans);font-size:8.5px;letter-spacing:.34em;color:var(--gold);margin-top:1px}
+.head-cta{padding:11px 22px;font-size:12px;letter-spacing:.1em}
+@media(max-width:600px){.head-cta{padding:10px 16px;font-size:11px}.brand{font-size:16px}}
+
+/* ヒーロー（黒・余白・金） */
+.hero{position:relative;background:var(--black);color:#fff;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:clamp(520px,82vh,720px)}
+.hero__body{display:flex;flex-direction:column;justify-content:center;padding:clamp(44px,7vw,80px) clamp(26px,5vw,64px)}
+.hero__img{position:relative;background:#1c1c1c}
+.hero__img .ph{width:100%;height:100%;background:linear-gradient(160deg,#222,#0d0d0d);color:#4a4a44}
+.hero__img::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 120px rgba(0,0,0,.6)}
+.hero__eyebrow{font-family:var(--serif);font-style:italic;font-size:clamp(16px,4vw,20px);letter-spacing:.22em;color:var(--gold);margin:0 0 22px}
+.hero h1{font-family:var(--jp);font-weight:600;font-size:clamp(28px,6.6vw,46px);line-height:1.55;letter-spacing:.06em;margin:0}
+.hero h1 .l{color:var(--gold)}
+.hero__sub{color:rgba(255,255,255,.74);font-size:14.5px;margin:24px 0 34px;max-width:24em}
+.hero__meta{margin-top:30px;font-size:11.5px;letter-spacing:.14em;color:rgba(255,255,255,.5)}
+@media(max-width:760px){
+  .hero__grid{grid-template-columns:1fr}
+  .hero__img{min-height:300px;order:-1}
+}
+
+/* コンセプト（3本柱） */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:8px;border-top:1px solid var(--line)}
+.pillar{padding:34px 22px;text-align:center;border-bottom:1px solid var(--line)}
+.pillar:not(:last-child){border-right:1px solid var(--line)}
+.pillar .n{font-family:var(--serif);font-style:italic;color:var(--gold-d);font-size:20px}
+.pillar h3{font-family:var(--jp);font-size:17px;letter-spacing:.08em;margin:8px 0 8px}
+.pillar p{font-size:12.5px;color:var(--ink-soft);margin:0;line-height:1.9}
+@media(max-width:680px){.pillars{grid-template-columns:1fr}.pillar:not(:last-child){border-right:none}}
+
+/* トレーナー */
+.trainer{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,5vw,56px);align-items:center}
+.trainer__img .ph{aspect-ratio:4/5;border:1px solid var(--line)}
+.trainer__badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
+.badge{display:inline-flex;align-items:center;gap:.5em;border:1px solid var(--gold);color:var(--gold-d);font-size:12px;letter-spacing:.06em;padding:8px 14px;border-radius:999px}
+.badge::before{content:"\2605";color:var(--gold)}
+.trainer p{font-size:14px;color:var(--ink-soft)}
+@media(max-width:760px){.trainer{grid-template-columns:1fr}}
+
+/* 選ばれる理由 */
+.reasons{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.reason{background:var(--bg);padding:30px clamp(20px,4vw,36px);display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start}
+.reason .no{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--gold);line-height:1}
+.reason h3{font-family:var(--jp);font-size:17px;letter-spacing:.06em;margin:0 0 6px}
+.reason p{font-size:13.5px;color:var(--ink-soft);margin:0}
+
+/* 口コミ */
+.voices{display:grid;gap:18px}
+.voice{background:var(--bg);border:1px solid var(--line);padding:26px 28px}
+.voice .stars{color:var(--gold);letter-spacing:.2em;font-size:13px}
+.voice p{font-family:var(--jp);font-size:14.5px;line-height:1.95;margin:12px 0 14px}
+.voice .by{font-size:12px;color:var(--ink-mute);letter-spacing:.06em}
+.voice .src{display:inline-block;font-size:10.5px;color:var(--ink-mute);margin-top:14px;letter-spacing:.08em}
+
+/* 料金 */
+.trial{background:var(--black);color:#fff;text-align:center;padding:34px 24px;border-radius:var(--radius)}
+.trial .t{font-family:var(--serif);font-style:italic;color:var(--gold);letter-spacing:.18em;font-size:18px}
+.trial .p{font-family:var(--jp);font-size:clamp(34px,9vw,46px);margin:6px 0 2px}
+.trial .p small{font-size:.4em;color:rgba(255,255,255,.7);letter-spacing:.1em}
+.trial .note{font-size:12px;color:rgba(255,255,255,.6);margin:0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:40px 0 26px}
+.tab{font-family:var(--jp);font-size:14px;letter-spacing:.08em;color:var(--ink-soft);background:var(--bg);border:1px solid var(--line);padding:11px 20px;border-radius:999px;cursor:pointer;transition:.25s}
+.tab.is-on{background:var(--black);color:#fff;border-color:var(--black)}
+.panel{display:none}
+.panel.is-on{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel__cap{text-align:center;font-size:12px;letter-spacing:.1em;color:var(--gold-d);margin-bottom:18px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.plan{border:1px solid var(--line);padding:24px 18px;text-align:center}
+.plan.is-reco{border:1px solid var(--gold);position:relative}
+.plan.is-reco::before{content:"人気";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1a1303;font-size:10.5px;letter-spacing:.1em;padding:3px 14px;border-radius:999px}
+.plan .freq{font-family:var(--jp);font-size:15px;letter-spacing:.06em}
+.plan .price{font-family:var(--jp);font-size:clamp(22px,5vw,27px);margin:8px 0 2px}
+.plan .price small{font-size:.5em;color:var(--ink-mute)}
+.plan .per{font-size:11px;color:var(--ink-mute)}
+@media(max-width:560px){.plans{grid-template-columns:1fr}}
+.addons{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.addon{border:1px solid var(--line);padding:22px 22px}
+.addon h4{font-family:var(--jp);font-size:15px;letter-spacing:.06em;margin:0 0 10px}
+.addon ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.addon li{display:flex;justify-content:space-between;font-size:13px;border-bottom:1px dotted var(--line);padding-bottom:7px}
+.addon li b{font-family:var(--jp);color:var(--gold-d)}
+.addon .reco{color:var(--gold-d);font-weight:700}
+@media(max-width:560px){.addons{grid-template-columns:1fr}}
+.taxnote{text-align:center;font-size:11.5px;color:var(--ink-mute);margin-top:20px;letter-spacing:.06em}
+
+/* 持ち物 */
+.bring{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.bring span{border:1px solid var(--line);padding:10px 20px;font-size:13px;letter-spacing:.06em;border-radius:999px}
+.bring span::before{content:"\2713";color:var(--gold-d);margin-right:.6em;font-weight:700}
+
+/* アクセス */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,40px);align-items:start}
+.access dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:14px 18px;font-size:13.5px}
+.access dt{font-family:var(--jp);color:var(--gold-d);letter-spacing:.08em;white-space:nowrap}
+.access dd{margin:0;color:var(--ink-soft)}
+.access__map .ph{aspect-ratio:4/3;border:1px solid var(--line)}
+.maplink{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--gold-d);border-bottom:1px solid var(--gold)}
+@media(max-width:680px){.access{grid-template-columns:1fr}}
+
+/* 最後のCTA */
+.last{text-align:center}
+.last h2{font-family:var(--jp);font-size:clamp(22px,6vw,32px);line-height:1.7;letter-spacing:.08em;margin:0 0 .6em}
+.last h2 .l{color:var(--gold)}
+.last p{color:rgba(255,255,255,.7);font-size:14px;margin:0 auto 30px;max-width:26em}
+
+/* フッター */
+.foot{background:#000;color:rgba(255,255,255,.5);text-align:center;padding:48px 24px}
+.foot .b{font-family:var(--serif);font-size:20px;letter-spacing:.18em;color:#fff;margin-bottom:6px}
+.foot .b small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;color:var(--gold);margin-top:3px}
+.foot .info{font-size:12px;line-height:2;letter-spacing:.04em;margin:16px 0 0}
+.foot .cp{font-size:10.5px;color:rgba(255,255,255,.3);margin-top:20px;letter-spacing:.08em}
+
+/* 固定CTA（スマホ） */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(13,13,13,.92);backdrop-filter:blur(8px);border-top:1px solid rgba(194,168,120,.3);padding:11px var(--pad) calc(11px + env(safe-area-inset-bottom));transform:translateY(120%);transition:transform .4s}
+.sticky.show{transform:translateY(0)}
+.sticky .btn{width:100%;max-width:var(--maxw);margin-inline:auto;display:flex}
+
+/* リビール */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
