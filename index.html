@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- EXECUTIVE personal gym ／ パーソナルジムLP（Responsive Agent方式）／CV：LINEで体験予約 一本化 -->
+<!-- EXECUTIVE PERSONAL GYM ／ パーソナルジムLP（Responsive Agent方式）／CV：LINEで体験予約 一本化 -->
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXECUTIVE personal gym｜筋トレ×ボクシングの完全マンツーマン｜大阪・枚方</title>
-<meta name="description" content="大阪・枚方のプライベートパーソナルジム。筋トレ×ボクシングの完全マンツーマンで、“動ける美しさ”へ。大会優勝の戦績を持つ専属トレーナーが一対一で指導。まずは体験3,000円から。">
+<title>EXECUTIVE PERSONAL GYM｜筋トレ×ボクシングの完全マンツーマン｜大阪・枚方</title>
+<meta name="description" content="大阪・枚方のプライベートパーソナルジム。筋トレ×ボクシングの完全マンツーマンで、“動ける美しさ”へ。大会優勝の戦績を持つ専属トレーナーが一対一で指導。まずは体験（税込3,300円）から。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,8 +16,19 @@
 <!-- ===== ヘッダー ===== -->
 <header class="site-head">
   <div class="wrap">
-    <div class="brand">EXECUTIVE<small>PERSONAL GYM</small></div>
-    <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold head-cta" data-cta target="_blank" rel="noopener">体験を予約</a>
+    <a href="#hero" class="brand">EXECUTIVE<small>PERSONAL GYM</small></a>
+    <nav class="nav" id="nav">
+      <a href="#concept">強み</a>
+      <a href="#trainer">トレーナー</a>
+      <a href="#studio">店内</a>
+      <a href="#price">料金</a>
+      <a href="#voice">口コミ</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <div class="head-right">
+      <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold head-cta" data-cta target="_blank" rel="noopener">体験を予約</a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -25,80 +36,92 @@
 <section class="hero" id="hero">
   <div class="hero__grid">
     <div class="hero__body">
-      <p class="hero__eyebrow">Boxing &times; Training</p>
-      <h1>強くなるほど、<br><span class="l">美しい</span>。</h1>
-      <p class="hero__sub">筋トレ×ボクシングの完全マンツーマン。<br>大阪・枚方のプライベートジムで、あなたの体を一対一で変えていきます。</p>
-      <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold btn--lg" data-cta target="_blank" rel="noopener">LINEで体験を予約する <span class="ar">→</span></a>
-      <p class="hero__meta">完全マンツーマン ／ 30〜40代に人気 ／ 体験 ¥3,000</p>
+      <p class="hero__eyebrow" style="font-style:normal;letter-spacing:.16em;font-family:var(--jp)">大阪・枚方 ／ 完全マンツーマン パーソナルジム</p>
+      <h1>ワンランク上の<br><span class="l">自分</span>を目指す</h1>
+      <p class="hero__sub">筋トレ×ボクシングの大会実績者が、完全マンツーマンであなた専用のメニューを設計。<br>一緒に、自分史上最高のカラダを目指しましょう。</p>
+      <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold btn--lg btn--stack" data-cta target="_blank" rel="noopener"><span>まずは体験を予約する <span class="ar">→</span></span><span class="btn-sub">体験価格（税込3,300円）</span></a>
+      <p class="hero__meta">社会人ボクシング 優勝 ／ フィジーク部門 優勝</p>
     </div>
-    <div class="hero__img"><div class="ph">GYM IMAGE</div></div>
+    <div class="hero__img"><img src="assets/hero.png" alt="EXECUTIVE PERSONAL GYM トレーナー"></div>
   </div>
 </section>
 
-<!-- ===== 2. コンセプト（3本柱） ===== -->
+<!-- ===== 1.5 お悩み (problem) ===== -->
+<section class="section section--paper" id="problem">
+  <div class="wrap--n wrap center reveal">
+    <h2 class="title">こんなお悩み、<br>ありませんか？</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="wrap wrap--n">
+    <div class="troubles">
+      <div class="trouble reveal"><span class="q">01</span><p>パーソナルジムは行ったことがなくて、なんだか怖い。</p></div>
+      <div class="trouble reveal"><span class="q">02</span><p>自分で運動してみてはいるけど、効果が感じられない。</p></div>
+      <div class="trouble reveal"><span class="q">03</span><p>とにかく、効率よく痩せたい。</p></div>
+    </div>
+    <p class="trouble__close reveal">そんな方こそ、完全マンツーマンの<span class="l">EXECUTIVE</span>へ。<br>大会実績のサポートで、心も体も絶好調に。</p>
+  </div>
+</section>
+
+<!-- ===== 2. そんな方へ（コンセプト・3本柱） ===== -->
 <section class="section" id="concept">
   <div class="wrap center reveal">
-    <p class="eyebrow">Concept</p>
-    <h2 class="title">“続く”と“結果”を、<br>両立するために。</h2>
+    <h2 class="title">EXECUTIVE PERSONAL GYM<br>の<span class="l">強み</span></h2>
     <div class="rule"></div>
+    <p class="concept__lead reveal">EXECUTIVE PERSONAL GYM では、筋トレ・ボクシングの大会実績者が、完全マンツーマンであなたに合ったトレーニングを考えます。一緒に、自分史上最高のカラダを目指しましょう。</p>
   </div>
   <div class="wrap">
     <div class="pillars">
-      <div class="pillar reveal"><div class="n">01</div><h3>筋トレ×ボクシング</h3><p>ただ追い込むだけじゃない。打つ爽快感で、楽しみながら脂肪を燃やし、引き締める。</p></div>
-      <div class="pillar reveal"><div class="n">02</div><h3>完全マンツーマン</h3><p>人目を気にせず、あなただけのメニューで。一対一だから、フォームも強度も最適化。</p></div>
-      <div class="pillar reveal"><div class="n">03</div><h3>戦績を持つ専属</h3><p>大会で勝ってきた“本物”が直接指導。確かな技術で、最短距離の変化へ。</p></div>
+      <div class="pillar reveal"><div class="n">01</div><h3>筋トレ×ボクシング</h3><p>あなたに合うメニューを設計。ストレス発散にも。</p></div>
+      <div class="pillar reveal"><div class="n">02</div><h3>完全マンツーマン</h3><p>人目を気にせず一対一で。初めての方でも、安心して通えます。</p></div>
+      <div class="pillar reveal"><div class="n">03</div><h3>トレーナーは大会実績者</h3><p>社会人ボクシングの大阪大会で優勝。ボディコンテスト・フィジーク部門で優勝。</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 3. トレーナー ===== -->
-<section class="section section--paper" id="trainer">
+<!-- ===== 3. トレーナー紹介（黒） ===== -->
+<section class="section section--black" id="trainer">
   <div class="wrap">
     <div class="trainer">
-      <div class="trainer__img reveal"><div class="ph">TRAINER PHOTO</div></div>
+      <div class="trainer__img reveal"><img src="assets/trainer.png" alt="トレーナー MAKOTO"></div>
       <div class="reveal">
-        <p class="eyebrow">Trainer</p>
-        <h2 class="title">勝ってきた人間が、<br><span class="l">隣で</span>導く。</h2>
+        <h2 class="title">トレーナー紹介<br><span class="makoto"><small class="makoto__yomi">マコト</small>MAKOTO</span></h2>
         <div class="trainer__badges">
           <span class="badge">社会人ボクシング 大阪大会 優勝</span>
           <span class="badge">ボディコンテスト フィジーク部門 優勝</span>
         </div>
-        <p>リングとステージ、その両方で結果を出してきたトレーナーが、あなた専属で指導します。「強く、美しく」を本気で目指す方を、技術と経験で全力でサポートします。</p>
+        <p>筋トレだけではなく、ボクシング技術もお任せ下さい。1人だと出来ない、1人だと辿り着けない境地を、一緒に目指しましょう。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 4. 選ばれる理由 ===== -->
-<section class="section" id="reasons">
+<!-- ===== 3.5 店内ギャラリー（黒） ===== -->
+<section class="section section--black" id="studio" style="padding-top:0">
   <div class="wrap--n wrap center reveal">
-    <p class="eyebrow">Reasons</p>
-    <h2 class="title">30〜40代の女性に、<br>選ばれています。</h2>
+    <h2 class="title">店内のご紹介</h2>
     <div class="rule"></div>
   </div>
-  <div class="wrap wrap--n">
-    <div class="reasons">
-      <div class="reason reveal"><div class="no">01</div><div><h3>完全プライベート空間</h3><p>マンツーマンの個室指導。人目を気にせず、自分のペースで集中できます。</p></div></div>
-      <div class="reason reveal"><div class="no">02</div><div><h3>ボクシングだから続く</h3><p>単調になりがちな運動も、打つ楽しさで飽きずに継続。ストレス発散にも。</p></div></div>
-      <div class="reason reveal"><div class="no">03</div><div><h3>本物の技術で指導</h3><p>大会優勝の実績を持つトレーナーが、一人ひとりに合わせて丁寧に。</p></div></div>
-      <div class="reason reveal"><div class="no">04</div><div><h3>酸素・有酸素も併用</h3><p>60分以上は時間内に酸素併用が可能。効率よく整え、絞れます。</p></div></div>
+  <div class="wrap">
+    <div class="gallery3 reveal">
+      <img src="assets/studio1.jpg" alt="店内">
+      <img src="assets/studio2.jpg" alt="トレーニングマシン">
+      <img src="assets/studio3.jpg" alt="トレーニングマシン">
     </div>
   </div>
 </section>
 
-<!-- ===== 5. 口コミ（Googleマップ抜粋／※実際の文面に差し替え） ===== -->
+<!-- ===== 4. 口コミ ===== -->
 <section class="section section--paper" id="voice">
   <div class="wrap--n wrap center reveal">
-    <p class="eyebrow">Voice</p>
-    <h2 class="title">通う方の、声。</h2>
+    <h2 class="title">口コミ</h2>
     <div class="rule"></div>
   </div>
   <div class="wrap wrap--n">
     <div class="voices">
-      <!-- ▼ 公開前にGoogleマップの実際の口コミ文面・お名前に差し替え -->
-      <div class="voice reveal"><div class="stars">★★★★★</div><p>（ここにGoogleマップの口コミ①を掲載します。実際の文面に差し替えてください。）</p><div class="by">— ◯◯ 様</div><span class="src">Google マップより</span></div>
-      <div class="voice reveal"><div class="stars">★★★★★</div><p>（ここにGoogleマップの口コミ②を掲載します。実際の文面に差し替えてください。）</p><div class="by">— ◯◯ 様</div><span class="src">Google マップより</span></div>
-      <div class="voice reveal"><div class="stars">★★★★★</div><p>（ここにGoogleマップの口コミ③を掲載します。実際の文面に差し替えてください。）</p><div class="by">— ◯◯ 様</div><span class="src">Google マップより</span></div>
+      <div class="voice reveal"><div class="stars">★★★★★</div><p>スポーツクラブに通っていましたが、自分ではどこに効いているか分からず…。やっぱりトレーナーに指導されると違います。「モチベーションが上がる」、そう思える指導をしてくれます。通い始めて日は浅いですが、自分史上最高の体を目指して頑張ろうと思えるジムです。</p><span class="src">Google マップの口コミより</span></div>
+      <div class="voice reveal"><div class="stars">★★★★★</div><p>身体の状態に合わせてメニューを変えてくださり、あと数回がキツくて諦めそうな時も褒めてくださるので、モチベーションが上がって無理なく楽しく続けられています。いつもありがとうございます^^</p><span class="src">Google マップの口コミより</span></div>
+      <div class="voice reveal"><div class="stars">★★★★★</div><p>どんな所か不安でしたが、明るく迎えて下さり安心しました。引き締めたい箇所も丁寧にカウンセリングして頂き、室内は“theパーソナルジム”という雰囲気でモチベーションがかなり上がります。キックボクシング用の器具なども揃っていて、幅広く体験できます。</p><span class="src">Google マップの口コミより</span></div>
+      <div class="voice reveal"><div class="stars">★★★★★</div><p>はじめてのパーソナルジムでしたが、カウンセリングシートを使って丁寧にお話ししていただけて安心感がありました。トレーナーさんに見られながら掛け声をしてくれるので、とても達成感が。気さくで、目を見て話してくれる方です。引き続き通わせていただきます。</p><span class="src">Google マップの口コミより</span></div>
     </div>
   </div>
 </section>
@@ -106,16 +129,15 @@
 <!-- ===== 6. 料金 ===== -->
 <section class="section" id="price">
   <div class="wrap--n wrap center reveal">
-    <p class="eyebrow">Price</p>
     <h2 class="title">料金のご案内</h2>
     <div class="rule"></div>
   </div>
   <div class="wrap wrap--n">
     <!-- 体験 -->
     <div class="trial reveal">
-      <p class="t">First Trial</p>
-      <p class="p">¥3,000<small>（税抜）</small></p>
-      <p class="note">まずは体験トレーニングから。手ぶら以外の持ち物だけご用意ください。</p>
+      <p class="t" style="font-style:normal;font-family:var(--jp)">体験トレーニング</p>
+      <p class="p">¥3,300<small>（税込）</small></p>
+      <p class="note">まずは体験トレーニングから。下記の持ち物だけご用意ください。</p>
     </div>
 
     <!-- 時間別タブ -->
@@ -186,14 +208,13 @@
         </ul>
       </div>
     </div>
-    <p class="taxnote">※ 料金はすべて税抜き価格です。</p>
+    <p class="taxnote">※ 体験は税込価格です。各コース料金は税抜き表示です。</p>
   </div>
 </section>
 
 <!-- ===== 7. 持ち物 ===== -->
 <section class="section section--paper" id="bring">
   <div class="wrap--n wrap center reveal">
-    <p class="eyebrow">Bring</p>
     <h2 class="title">トレーニングに必要なもの</h2>
     <div class="rule"></div>
     <div class="bring reveal">
@@ -208,22 +229,20 @@
 <!-- ===== 8. アクセス ===== -->
 <section class="section" id="access">
   <div class="wrap--n wrap center reveal">
-    <p class="eyebrow">Access</p>
     <h2 class="title">アクセス・店舗情報</h2>
     <div class="rule"></div>
   </div>
   <div class="wrap wrap--n">
     <div class="access">
       <dl class="reveal">
-        <dt>店名</dt><dd>EXECUTIVE personal gym</dd>
+        <dt>店名</dt><dd>EXECUTIVE PERSONAL GYM</dd>
         <dt>住所</dt><dd>〒573-0001<br>大阪府枚方市田口山3丁目1-15</dd>
         <dt>営業時間</dt><dd>10:00 〜 20:00</dd>
         <dt>定休日</dt><dd>日曜日（営業：月〜土）</dd>
         <dt>電話</dt><dd><a href="tel:08025743800" style="border-bottom:1px solid var(--gold);color:var(--gold-d)">080-2574-3800</a></dd>
-        <dt>担当</dt><dd>下里</dd>
       </dl>
       <div class="access__map reveal">
-        <div class="ph">MAP</div>
+        <iframe class="mapframe" src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9E%9A%E6%96%B9%E5%B8%82%E7%94%B0%E5%8F%A3%E5%B1%B13%E4%B8%81%E7%9B%AE1-15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="地図"></iframe>
         <a class="maplink" href="https://maps.app.goo.gl/hnteqstxwyz3TV2u5" target="_blank" rel="noopener">Googleマップで見る →</a>
       </div>
     </div>
@@ -233,24 +252,24 @@
 <!-- ===== 9. 最後のCTA ===== -->
 <section class="section section--black last" id="cta-last">
   <div class="wrap--n wrap">
-    <p class="eyebrow">Start</p>
     <h2 class="reveal">変わる第一歩は、<br><span class="l">体験</span>から。</h2>
-    <p class="reveal">まずは体験トレーニング（¥3,000）で、本物の指導を体感してください。<br>ご予約・ご相談はLINEから、一言でOKです。</p>
-    <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold btn--lg" data-cta target="_blank" rel="noopener">LINEで体験を予約する <span class="ar">→</span></a>
+    <p class="reveal">まずは体験トレーニング（税込3,300円）で、本物の指導を体感してください。<br>ご予約・ご相談はLINEから、一言でOKです。</p>
+    <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold btn--lg btn--stack" data-cta target="_blank" rel="noopener"><span>LINEで体験を予約する <span class="ar">→</span></span><span class="btn-sub">体験価格（税込3,300円）</span></a>
     <p class="cta-note">お電話でも受け付けています：<a href="tel:08025743800" style="color:var(--gold)">080-2574-3800</a></p>
   </div>
 </section>
 
 <!-- ===== フッター ===== -->
 <footer class="foot">
-  <div class="b">EXECUTIVE<small>PERSONAL GYM</small></div>
+  <img class="foot-logo" src="assets/logo.jpg" alt="EXECUTIVE PERSONAL GYM">
   <p class="info">大阪府枚方市田口山3丁目1-15／10:00–20:00（日曜定休）<br>TEL 080-2574-3800</p>
-  <p class="cp">© EXECUTIVE personal gym. All rights reserved.</p>
+  <a class="foot-ig" href="https://www.instagram.com/executive_personalgym/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram ＠executive_personalgym</a>
+  <p class="cp">© EXECUTIVE PERSONAL GYM. All rights reserved.</p>
 </footer>
 
 <!-- 固定CTA（スマホ） -->
 <div class="sticky" id="stickyCta">
-  <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold" data-cta target="_blank" rel="noopener">LINEで体験を予約する <span class="ar">→</span></a>
+  <a href="https://line.me/ti/p/3QlHQT78kM" class="btn btn--gold btn--stack" data-cta target="_blank" rel="noopener"><span>LINEで体験を予約する <span class="ar">→</span></span><span class="btn-sub">体験価格（税込3,300円）</span></a>
 </div>
 
 <script src="js/script.js"></script>

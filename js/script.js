@@ -40,4 +40,16 @@
     };
     window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
   }
+
+  /* ハンバーガーメニュー（スマホ） */
+  var navToggle=document.getElementById('navToggle'), nav=document.getElementById('nav');
+  if(navToggle&&nav){
+    navToggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){nav.classList.remove('open');navToggle.setAttribute('aria-expanded','false');});
+    });
+  }
 })();
